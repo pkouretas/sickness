@@ -7,9 +7,10 @@ buildscript {
 	}
 	dependencies {
 		classpath("org.springframework.boot:spring-boot-gradle-plugin:1.3.2.RELEASE")
-	}
+        classpath group: 'commons-codec', name: 'commons-codec', version: '1.2'
+    	// classpath group, just hoping to include the asset files 
+    }
 }
-
 apply plugin: 'java'
 apply plugin: 'eclipse'
 apply plugin: 'spring-boot' 

@@ -6,7 +6,6 @@ import java.util.Map;
 
 public class SicknessMap {
 
-	private static String DEFAULT_PATH = "assets\\phrases";
 	private Map<String, String> illnesses = new HashMap<String, String>();
 	private volatile static SicknessMap instance;
 	
@@ -24,7 +23,7 @@ public class SicknessMap {
 	}
 	
 	public void build() throws IOException {
-		this.illnesses = SicknessMapBuilder.buildFrom(DEFAULT_PATH);
+		this.illnesses = SicknessMapBuilder.build();
 	}
 	
 	/*public int getSize(){
